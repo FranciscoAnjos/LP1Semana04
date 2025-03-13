@@ -2,6 +2,9 @@
 
 namespace BetterDecorador
 {
+    /// <summary>
+    /// Class containing the program entry point and the string decoration method.
+    /// </summary>
     public class Program
     {
         private static void Main(string[] args)
