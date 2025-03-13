@@ -9,8 +9,10 @@ namespace BetterDecorador
     {
         /// <summary>
         /// Entry point of the program.
-        /// This method receives three arguments from the command line: a string, a decorative character, and an integer.
-        /// The program decorates the string with the decorative character repeated the specified number of times.
+        /// This method receives three arguments from the command line: a string, a decorative character,
+        /// and an integer.
+        /// The program decorates the string with the decorative character repeated the specified
+        /// number of times.
         /// </summary>
         /// <param name="args">Array of strings containing the arguments passed from the command line. 
         /// The first argument is the string to be decorated, 
@@ -27,18 +29,27 @@ namespace BetterDecorador
 
         /// <summary>
         /// Decorates a string with a character repeated around the string.
-        /// The decorative character is repeated the specified number of times and is placed before and after the string.
+        /// The decorative character is repeated the specified number of times and is placed before
+        /// and after the string.
         /// </summary>
         /// <param name="s">The string to be decorated.</param>
         /// <param name="dec">The decorative character that will be repeated.</param>
         /// <param name="num">The number of times the character will be repeated around the string.</param>
-        /// <returns>Returns a new string with the decorative character before and after the original string.</returns>
+        /// <returns>Returns a new string with the decorative character before and after the
+        /// original string.</returns>
         private static string Decor(string s, char dec, int num)
         {
             string decoration = new string(dec, num);
             return $"{decoration} {s} {decoration}";
         }
         
+        /// <summary>
+        /// Decorates a default message when no arguments are provided.
+        /// This method delegates its task to the Decor(string, char, int) method 
+        /// with the predefined parameters: "User did not specify args!", '=', and 3.
+        /// </summary>
+        /// <returns>Returns a string decorated with '=' character, indicating that no
+        /// arguments were provided.</returns>
         private static string Decor()
         {
             return Decor("User did not specify args!", '=', 3);
