@@ -9,9 +9,10 @@ namespace BetterDecorador
             Console.WriteLine("Hello LP1!");
         }
 
-        private static string Decor(string s, char dec)
+        private static string Decor(string s, char dec, int num)
         {
-            return $" {dec}{dec}{dec} {s} {dec}{dec}{dec}";
+            string decoration = new string(dec, num);
+            return $"{decoration} {s} {decoration}";
         }
     }
 }
