@@ -25,6 +25,14 @@ namespace BetterDecorador
             Console.WriteLine(Decor(inputString, decorationChar, decorationCount));
         }
 
+        /// <summary>
+        /// Decorates a string with a character repeated around the string.
+        /// The decorative character is repeated the specified number of times and is placed before and after the string.
+        /// </summary>
+        /// <param name="s">The string to be decorated.</param>
+        /// <param name="dec">The decorative character that will be repeated.</param>
+        /// <param name="num">The number of times the character will be repeated around the string.</param>
+        /// <returns>Returns a new string with the decorative character before and after the original string.</returns>
         private static string Decor(string s, char dec, int num)
         {
             string decoration = new string(dec, num);
