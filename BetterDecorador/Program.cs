@@ -20,6 +20,12 @@ namespace BetterDecorador
         /// and the third is the number of times the character should be repeated.</param>
         private static void Main(string[] args)
         {
+            if (args.Length == 0)
+            {
+                Console.WriteLine(Decor());
+                return;
+            }
+            
             string inputString = args[0];
             char decorationChar = char.Parse(args[1]);
             int decorationCount = int.Parse(args[2]);
