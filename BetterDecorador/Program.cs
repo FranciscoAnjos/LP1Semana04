@@ -6,7 +6,11 @@ namespace BetterDecorador
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Hello LP1!");
+            string inputString = args[0];
+            char decorationChar = char.Parse(args[1]);
+            int decorationCount = int.Parse(args[2]);
+
+            Console.WriteLine(Decor(inputString, decorationChar, decorationCount));
         }
 
         private static string Decor(string s, char dec, int num)
